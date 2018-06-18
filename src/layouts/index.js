@@ -27,7 +27,7 @@ const Layout = ({ children, data }) => (
           </ul>
         </address>
         <nav id="navigation">
-          <a id="walker-logo" href="/">Walker Technologies, Inc.</a>
+          <Link to="/" id="walker-logo">Walker Technologies, Inc.</Link>
           <ul id="main-navigation">
             <li><HeaderButton linkTo="/about/" text="About" /></li>
             <li><HeaderButton linkTo="/services/" text="Services" /></li>
