@@ -1,33 +1,39 @@
 import React from 'react'
+import { inject, observer } from 'mobx-react'
 
-const Page = () => (
-	<div id="content-wrapper">
-		<div className="content-wrapper vertical top left"></div>
-		<div className="content-wrapper vertical top right"></div>
+const Page = ({form}) => (
+  <div id="content-wrapper">
+    <div className="content-wrapper vertical top left"></div>
+    <div className="content-wrapper vertical top right"></div>
 
-		<form id="contact-form" action="/contact" method="post">
-      <label htmlFor="ContactForm_name">Your Name</label>
-  		<div className="errorMessage" id="ContactForm_name_em_" style={{display: 'none'}}></div>
-      <input name="ContactForm[name]" id="ContactForm_name" type="text" />
+    <form id="contact-form" action="#" method="post">
+      <label htmlFor="name">Your Name</label>
+      <div className={`errorMessage ${form.shouldShowNameError ? 'visible' : ''}`}>Your name cannot be blank.</div>
+      <input name="name" id="name" type="text" value={form.name} onChange={form.update} />
 
-      <label htmlFor="ContactForm_email">Your Email</label>
-  		<div className="errorMessage" id="ContactForm_email_em_" style={{display: 'none'}}></div>
-      <input name="ContactForm[email]" id="ContactForm_email" type="text" />
+      <label htmlFor="email">Your Email</label>
+      <div className={`errorMessage ${form.shouldShowEmailError ? 'visible' : ''}`}>Your email cannot be blank.</div>
+      <input name="email" id="email" type="text" value={form.email} onChange={form.update} />
 
-      <label htmlFor="ContactForm_phone">Phone</label>
-  		<div className="errorMessage" id="ContactForm_phone_em_" style={{display: 'none'}}></div>
-      <input name="ContactForm[phone]" id="ContactForm_phone" type="text" />
+      <label htmlFor="phone">Phone</label>
+      <div className={`errorMessage ${form.shouldShowPhoneError ? 'visible' : ''}`}>Your phone number cannot be blank.</div>
+      <input name="phone" id="phone" type="text" value={form.phone} onChange={form.update} />
 
-      <label htmlFor="ContactForm_body">Comments and Questions</label>
-  		<div className="errorMessage" id="ContactForm_body_em_" style={{display: 'none'}}></div>
+      <label htmlFor="comments">Comments and Questions</label>
+      <div className={`errorMessage ${form.shouldShowCommentsError ? 'visible' : ''}`}>Comments and Questions cannot be blank.</div>
+      <textarea rows="6" cols="50" name="comments" id="comments" value={form.comments} onChange={form.update}></textarea>
 
-      <textarea rows="6" cols="50" name="ContactForm[body]" id="ContactForm_body"></textarea>
-      <input className="walker-button" type="submit" name="yt0" value="Submit" />
-		</form>
 
-		<div className="content-wrapper vertical bottom left"></div>
-		<div className="content-wrapper vertical bottom right"></div>
-	</div>
+      <button className="walker-button submit" name="yt0" onClick={form.submit} >Submit</button>
+
+      { form.submissionSucceeded === true &&
+        <p className="errorMessage">Thank you for contacting us–we'll be in touch shortly!</p>
+      }
+    </form>
+
+    <div className="content-wrapper vertical bottom left"></div>
+    <div className="content-wrapper vertical bottom right"></div>
+  </div>
 )
 
-export default Page
+export default inject('form')(observer(Page))
