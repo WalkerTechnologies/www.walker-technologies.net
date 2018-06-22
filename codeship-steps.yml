@@ -1,0 +1,11 @@
+- name: Install Dependencies
+  service: gatsby
+  command: npm install
+
+- name: Build Site
+  service: gatsby
+  command: gatsby build
+
+- name: Push to S3
+  service: aws
+  command: aws s3 sync public/ s3://net.walker-technologies.www/

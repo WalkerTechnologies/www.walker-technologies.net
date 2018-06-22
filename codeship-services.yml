@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  gatsby:
+    build:
+      image: joshfreeman.io/gatsby
+      dockerfile: Dockerfile
+    cached: true
+    working_dir: /opt
+    volumes:
+      - ./:/opt
+
+  aws:
+    image: garland/aws-cli-docker
+    cached: true
+    working_dir: /opt
+    volumes_from:
+      - gatsby
+    encrypted_env_file: ./aws.env.encrypted
