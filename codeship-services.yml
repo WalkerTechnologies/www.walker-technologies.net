@@ -4,14 +4,16 @@ services:
   gatsby:
     build:
       image: joshfreeman.io/gatsby
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.gatsby
     cached: true
     working_dir: /opt
     volumes:
       - ./:/opt
 
   aws:
-    image: garland/aws-cli-docker
+    build:
+      image: joshfreeman.io/aws-cli-docker
+      dockerfile: Dockerfile.aws-cli-docker
     cached: true
     working_dir: /opt
     volumes_from:
