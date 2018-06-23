@@ -2,6 +2,12 @@ import React from 'react'
 import { inject, observer } from 'mobx-react'
 
 const Page = ({form}) => (
+  <div>
+  <div className="h1-group">
+    <h1 id='header'>Contact Us</h1>
+    <div className="walker-splitter"></div>
+  </div>
+
   <div id="content-wrapper">
     <div className="content-wrapper vertical top left"></div>
     <div className="content-wrapper vertical top right"></div>
@@ -33,6 +39,8 @@ const Page = ({form}) => (
 
     <div className="content-wrapper vertical bottom left"></div>
     <div className="content-wrapper vertical bottom right"></div>
+  </div>
+
   </div>
 )
 
