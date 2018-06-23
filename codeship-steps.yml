@@ -9,3 +9,11 @@
 - name: Push to S3
   service: aws
   command: aws s3 sync public/ s3://net.walker-technologies.www/
+
+- name: Enable CloudFront
+  service: aws
+  command: aws configure set preview.cloudfront true
+
+- name: Invalidate CloudFront
+  service: aws
+  command: aws cloudfront create-invalidation --distribution-id 'E1DWP242TSVX5D' --paths '/*'
