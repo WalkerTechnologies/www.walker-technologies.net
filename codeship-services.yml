@@ -10,12 +10,12 @@ services:
     volumes:
       - ./:/opt
 
-  aws:
+  firebase:
     build:
-      image: joshfreeman.io/aws-cli-docker
-      dockerfile: Dockerfile.aws-cli-docker
+      image: joshfreeman.io/firebase
+      dockerfile: Dockerfile.firebase
     cached: true
     working_dir: /opt
-    volumes_from:
-      - gatsby
-    encrypted_env_file: ./aws.env.encrypted
+    volumes:
+      - ./:/opt
+    encrypted_env_file: ./.env.firebase.encrypted

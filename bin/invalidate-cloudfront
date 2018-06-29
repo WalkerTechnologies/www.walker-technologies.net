@@ -1,3 +1,0 @@
-#!/bin/sh
-
-aws cloudfront create-invalidation --invalidation-batch file://invalidation-batch.json --distribution-id 'E3EN9TXI8ZSGFD'

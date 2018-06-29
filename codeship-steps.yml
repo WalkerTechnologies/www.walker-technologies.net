@@ -6,14 +6,7 @@
   service: gatsby
   command: gatsby build
 
-- name: Push to S3
-  service: aws
-  command: aws s3 sync public/ s3://net.walker-technologies.www/
+- name: Push to Google Firebase
+  service: firebase
+  command: bash -c "firebase deploy --token ${FIREBASE_TOKEN}"
 
-- name: Create Invalidation File
-  service: gatsby
-  command: node bin/create-invalidation-file.js
-
-- name: Invalidate CloudFront
-  service: aws
-  command: bin/invalidate-cloudfront
