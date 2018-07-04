@@ -8,18 +8,18 @@ const ContactUs = types
     phone: types.optional(types.string, ''),
     comments: types.optional(types.string, ''),
     showErrors: types.optional(types.boolean, false),
-    formFailed: types.optional(types.boolean, false),
     submissionSucceeded: types.optional(types.boolean, false)
   })
   .actions(self => ({
     update(event) {
       self[event.target.name] = event.target.value
+      self.submissionSucceeded = false
     },
     submit(event) {
       self.showErrors = true
       event.preventDefault()
 
-      if (self.shouldShowNameError || self.shouldShowEmailError || self.shouldShowPhoneError || self.shouldShowCommentsError) {
+      if (self.showErrorsFor('name') || self.showErrorsFor('email') || self.showErrorsFor('phone') || self.showErrorsFor('comments')) {
         return;
       }
 
@@ -35,37 +35,24 @@ const ContactUs = types
         body: formData,
         mode: 'no-cors'
       })
-      .catch(_ => self.formFailed())
-      .then(_ => self.succeed())
+      .then(_ => self.formSucceeded())
     },
-    formFailed() {
-      self.formFailed = true
-    },
-    succeed() {
-      self.submissionSucceeded = true
+    formSucceeded() {
       self.reset()
+      self.submissionSucceeded = true
     },
     reset() {
       self.name = ''
       self.email = ''
       self.phone = ''
       self.comments = ''
-      self.formFailed = false
       self.showErrors = false
+      self.submissionSucceeded = false
     }
   }))
   .views(self => ({
-    get shouldShowNameError() {
-      return self.showErrors && self.name.length === 0
-    },
-    get shouldShowEmailError() {
-      return self.showErrors && self.email.length === 0
-    },
-    get shouldShowPhoneError() {
-      return self.showErrors && self.phone.length === 0
-    },
-    get shouldShowCommentsError() {
-      return self.showErrors && self.comments.length === 0
+    showErrorsFor(key) {
+      return self.showErrors && self[key].length < 1
     }
   }))
 

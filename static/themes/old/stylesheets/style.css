@@ -988,3 +988,16 @@ body.splash .smaller {
   font-family: Bebas-Neue;
   text-decoration: underline;
 }
+
+.contact-input::placeholder {
+  text-align: left;
+}
+
+.contact-input.error::placeholder {
+  color: #ee3338;
+  font-style: italic;
+}
+
+.success-message {
+  text-align: center;
+}
