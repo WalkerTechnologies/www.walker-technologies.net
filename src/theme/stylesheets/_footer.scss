@@ -1,0 +1,30 @@
+$footerHeight: 75px;
+
+.site-footer {
+  background: url(./../images/hatch.png) #141414;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: $scale9;
+  height: $footerHeight;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.copyright-wrapper {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+
+  p {
+    width: 300px;
+  }
+}
+
+.copyright-logo {
+  height: 35px;
+  background: url(../images/walker-technologies-w.svg) no-repeat center;
+  background-size: contain;
+  text-indent: -9001px;
+}

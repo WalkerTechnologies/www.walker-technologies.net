@@ -1,0 +1,25 @@
+#___gatsby,
+[data-reactroot] {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#___gatsby {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+input, textarea {
+  box-sizing: border-box;
+}

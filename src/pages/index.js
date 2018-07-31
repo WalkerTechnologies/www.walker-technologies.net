@@ -1,8 +1,10 @@
 import React from 'react'
 
-const IndexPage = () => (
+const NotFoundPage = () => (
   <div>
+    <div className="h1-group">
+    </div>
   </div>
 )
 
-export default IndexPage
+export default NotFoundPage

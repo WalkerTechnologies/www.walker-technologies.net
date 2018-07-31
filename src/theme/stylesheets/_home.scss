@@ -1,0 +1,36 @@
+.section {
+  background: url(../images/backgrounds/data-center.jpg) darkblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .content-wrapper {
+    margin: 20px;
+    max-width: 960px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  p {
+    color: white;
+    font-size: $scale8;
+    margin-bottom: $scale11;
+  }
+}
+
+.colorful-spacer {
+  background-color: $walker-red-dark;
+  height: $scale4;
+  position: relative;
+
+  &:after {
+    background: url(../images/backgrounds/data-center-2.jpg) darkblue center no-repeat;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+  }
+}

@@ -1,0 +1,66 @@
+$headerHeight: 100px;
+
+.site-header {
+  width: 100%;
+  background: url(./../images/hatch.png) #141414;
+  height: $headerHeight;
+  padding-bottom: 5px;
+}
+
+.walker-logo-globe {
+  background: url(./../images/walker-technologies-globe.svg) no-repeat center;
+  background-size: contain;
+  width: 100px;
+  height: 100%;
+  display: inline-block;
+}
+
+.walker-logo-wordmark {
+  background: url(./../images/walker-technologies-text.svg)  no-repeat center;
+  background-size: contain;
+  display: inline-block;
+  height: 100%;
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.walker-link {
+  text-indent: -9000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 100%;
+}
+
+.thatch {
+  width: 100%;
+  height: 5px;
+  background: url(../images/thatch.svg) center repeat-x;
+  background-size: contain;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  height: calc(#{$headerHeight} - 5px);
+  padding: 0 75px;
+  justify-content: space-between;
+}
+
+.navigation-links {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+
+  a {
+    font-size: $scale8;
+    font-family: Lato, sans-serif;
+    text-decoration: none;
+    color: white;
+    margin: 0 $scale5;
+    text-transform: uppercase;
+  }
+}
