@@ -1,0 +1,34 @@
+.divided-section {
+  display: flex;
+  flex-direction: row;
+
+  & > * {
+    width: 50%;
+  }
+
+  .divided-section-content {
+    order: 1;
+  }
+
+  &.left .divided-section-content {
+    order: 0;
+  }
+}
+
+.divided-section-content {
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid $walker-black;
+  color: $walker-black;
+  padding: 18px;
+
+  h3 {
+    padding-left: $scale10;
+    margin-top: $scale9;
+  }
+
+  p {
+    padding-left: $scale10;
+    margin-bottom: $scale9;
+  }
+}

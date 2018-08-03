@@ -1,12 +1,12 @@
 import React from 'react'
 
 const NotFoundPage = () => (
-  <div>
-    <div className="h1-group">
-      <h1 id='header'>Not Found</h1>
-      <div className="walker-splitter"></div>
+  <React.Fragment>
+    <div className="banner"></div>
+    <div className="page-head">
+      <h1>Not Found</h1>
     </div>
-  </div>
+  </React.Fragment>
 )
 
 export default NotFoundPage

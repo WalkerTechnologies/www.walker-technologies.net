@@ -30,3 +30,14 @@
   font-weight: normal;
   font-style: normal;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'BebasNeue';
+}
+
+h1 { font-size: $scale4; }
+h2 { font-size: $scale5; }
+h3 { font-size: $scale6; }
+h4 { font-size: $scale7; }
+h5 { font-size: $scale8; }
+h6 { font-size: $scale9; }

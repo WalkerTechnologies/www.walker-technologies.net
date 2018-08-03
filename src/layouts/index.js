@@ -1,18 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
+import PropTypes from 'prop-types'
+import { Parallax } from 'react-parallax'
 import { Provider, observer } from 'mobx-react'
 import ContactUs from '../forms/ContactUs'
-
-import '../theme/stylesheets/index.scss'
-import SAMap from '../theme/images/san-antonio-white-red.png'
 import WalkerWordMark from '../theme/images/walker-technologies-text.svg'
-import { Parallax, Background } from 'react-parallax'
-
 import Image from '../theme/images/backgrounds/data-center.jpg'
-
+import '../theme/stylesheets/index.scss'
 
 const form = ContactUs.create({})
 

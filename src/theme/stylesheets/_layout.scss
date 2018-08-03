@@ -75,3 +75,25 @@ main {
   }
 }
 
+.banner {
+  height: 75px;
+  background: url(../images/backgrounds/data-center-4.png) center no-repeat;
+  background-size: cover;
+}
+
+.page-head {
+  background-color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid $walker-black;
+
+  & > * {
+    max-width: 960px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+}
