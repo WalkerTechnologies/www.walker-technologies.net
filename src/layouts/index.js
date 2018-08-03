@@ -9,6 +9,9 @@ import ContactUs from '../forms/ContactUs'
 import '../theme/stylesheets/index.scss'
 import SAMap from '../theme/images/san-antonio-white-red.png'
 import WalkerWordMark from '../theme/images/walker-technologies-text.svg'
+import { Parallax, Background } from 'react-parallax'
+
+import Image from '../theme/images/backgrounds/data-center.jpg'
 
 
 const form = ContactUs.create({})
@@ -24,6 +27,10 @@ const Layout = ({ children, data }) => (
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       </Helmet>
 
+
+      <Parallax
+        bgImage={Image}
+      >
       <header className="site-header">
         <nav className="navigation">
 
@@ -91,6 +98,8 @@ const Layout = ({ children, data }) => (
           <p>All&nbsp;Rights&nbsp;Reserved.</p>
         </div>
       </footer>
+      </Parallax>
+
     </React.Fragment>
   </Provider>
 )
