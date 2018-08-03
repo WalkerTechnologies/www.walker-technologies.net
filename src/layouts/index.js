@@ -49,45 +49,32 @@ const Layout = ({ children, data }) => (
         <div className="thatch"></div>
       </header>
 
+        <main>
+          {children()}
+        </main>
 
-      <main>
-        {children()}
-      </main>
+        <div className="contact-wrapper">
+          <div className="sa-map-wrapper" />
 
-      <div className="certifications">
-        <h3>Certficiations</h3>
-        <p>Walker Technologies is certified to serve your team</p>
+          <address className="walker-address">
+            <img src={WalkerWordMark} alt="Walker Technologies Wordmark"/>
+            <p className="walker-address-location">Headquartered in San Antonio, Texas</p>
+            <a href="tel:210-845-7630">(210) 845-7630</a>
+            <a href="mailto:adam@walker-technologies.net">adam@walker-technologies.net</a>
+          </address>
 
-
-      </div>
-
-      <div className="section">
-        <div className="content-wrapper">
-          <p>As organizations consume data at an ever-growing rate, a reliable network infrastructure becomes crucial for business survival in the 21st Century. Walker Technologies was founded to meet this growing demand and employs the most highly trained technicians to bring their proven expertise to your doorstep.</p>
-          <p>Walker Technologies plans, installs, and maintains the voice, data, and video infrastructures that build today's complex networks. Quality workmanship and your satisfaction are our highest priorities at Walker Technologies and believe that every aspect of your network is important. We perform full diagnostic examinations to ensure your networks are running at peak efficiency and certify that your network will exceed TIA/EIA standards for network cabling.</p>
-          <p>Expert workmanship, efficient service, and competitive pricing will enable you to secure an affordable and robust network your team can rely upon for years to come.</p>
-        </div>
-      </div>
-
-
-
-      <div className="contact-wrapper">
-        <div className="sa-map-wrapper">
-          <img src={SAMap} alt="San Antonio Roadways"/>
+          {/* <div className="walker-contact-form">
+            <input type="text" name="name" placeholder="Your name" />
+            <input type="text" name="email" placeholder="Your email"/>
+            <textarea name="comments" cols="30" rows="10" placeholder="Questions, comments, etc."></textarea>
+          </div> */}
         </div>
 
-        <address className="walker-address">
-          <img src={WalkerWordMark} alt="Walker Technologies Wordmark"/>
-          <p className="walker-address-location">Headquartered in San Antonio, Texas</p>
-          <a href="tel:210-845-7630">(210) 845-7630</a>
-          <a href="mailto:adam@walker-technologies.net">adam@walker-technologies.net</a>
-        </address>
-
-        {/* <div className="walker-contact-form">
-          <input type="text" name="name" placeholder="Your name" />
-          <input type="text" name="email" placeholder="Your email"/>
-          <textarea name="comments" cols="30" rows="10" placeholder="Questions, comments, etc."></textarea>
-        </div> */}
+      <div className="newsletter-form">
+        <p>Join our Newsletter</p>
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Email" />
+        <button>Submit</button>
       </div>
 
       <footer className="site-footer">

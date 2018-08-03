@@ -4,6 +4,10 @@
   width: 100%;
 }
 
+html {
+  font-family: "DroidSansRegular", sans-serif;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -20,6 +24,54 @@ main {
   flex-grow: 1;
 }
 
-input, textarea {
-  box-sizing: border-box;
+.parallax-background {
+  width: 100%;
+  background: url(../images/backgrounds/data-center.jpg) repeat-y;
 }
+
+.sa-map-wrapper {
+  background: url(../images/san-antonio-white-red.png) center no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+
+.newsletter-form {
+  background-color: $walker-red;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 18px;
+  font-size: $scale7;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $walker-black;
+
+  p {
+    margin-right: 12px;
+  }
+
+  input {
+    border: 1px solid $walker-black;
+    font-size: 24px;
+    height: 36px;
+    line-height: 24px;
+    margin-right: 12px;
+    padding: 12px;
+    width: 20%;
+  }
+
+  button {
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid $walker-black;
+    color: $walker-black;
+    font-size: 24px;
+    height: 36px;
+    line-height: 24px;
+
+    &:hover {
+      color: $walker-red;
+    }
+  }
+}
+
