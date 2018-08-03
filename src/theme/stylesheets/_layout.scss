@@ -24,6 +24,10 @@ main {
   flex-grow: 1;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .parallax-background {
   width: 100%;
   background: url(../images/backgrounds/data-center.jpg) repeat-y;
@@ -88,6 +92,7 @@ main {
   flex-direction: column;
   align-items: center;
   border-top: 1px solid $walker-black;
+  margin-bottom: $scale4;
 
   & > * {
     max-width: 960px;

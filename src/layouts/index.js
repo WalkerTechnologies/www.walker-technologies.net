@@ -34,10 +34,41 @@ const Layout = ({ children, data }) => (
             <span className="walker-logo-wordmark" />
           </Link>
 
-          <div className="navigation-links">
-            <Link to="/about/">About</Link>
-            <Link to="/services/">Services</Link>
-            <Link to="/contact/">Contact</Link>
+          <div className="">
+            <div className="navigation-links">
+              <div>
+                <Link to="/about/" className="main-link">About</Link>
+
+                <div className="sublinks-wrapper">
+                  <div className="sublinks">
+                    <Link to="/services/cable-installation">Cable Installation</Link>
+                    <Link to="/services/network-design">Network Design</Link>
+                  </div>
+                </div>
+
+              </div>
+
+              <div>
+                <Link to="/services/" className="main-link">Services</Link>
+
+                <div className="sublinks-wrapper">
+                  <div className="sublinks">
+                    <Link to="/services/network-testing">Network Testing</Link>
+                    <Link to="/services/site-maintenance">Site Maintenance</Link>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <Link to="/contact/" className="main-link">Contact</Link>
+
+                <div className="sublinks-wrapper">
+                  <div className="sublinks">
+                    <Link to="/services/badass-software">Badass Software</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </nav>
 

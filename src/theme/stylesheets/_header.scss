@@ -1,15 +1,15 @@
 $headerHeight: 100px;
 
 .site-header {
-  width: 100%;
+  align-items: center;
   background: url(./../images/hatch.png) #141414;
-  height: $headerHeight;
-  padding-bottom: 5px;
   border-bottom: 4px solid $walker-red;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  height: $headerHeight;
   justify-content: center;
+  padding-bottom: 5px;
+  width: 100%;
 }
 
 .walker-logo-globe {
@@ -53,6 +53,7 @@ $headerHeight: 100px;
   justify-content: space-between;
   padding: 0 75px;
   max-width: 1080px;
+  width: 100%;
 }
 
 .navigation-links {
@@ -62,12 +63,62 @@ $headerHeight: 100px;
   align-items: center;
   align-self: flex-end;
 
-  a {
+  .main-link {
+    width: 100px;
     font-size: $scale8;
     font-family: Lato, sans-serif;
     text-decoration: none;
     color: white;
-    margin: 0 $scale5;
+    padding-right: $scale5;
     text-transform: uppercase;
   }
+}
+
+.sublinks {
+  border-top: 1px solid white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2px;
+  max-width: 150px;
+  overflow: hidden;
+  position: absolute;
+  top: -200%;
+  width: 100%;
+
+  div {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    width: 100px + $scale5;
+  }
+
+  a {
+    font-size: $scale11;
+    font-family: Lato, sans-serif;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin-top: $scale13;
+  }
+}
+
+.site-header:hover {
+  transition: 0.5s ease;
+
+  .sublinks{
+    top: 0;
+    transition: 0.5s ease;
+  }
+}
+
+.sublinks-wrapper {
+  overflow: hidden;
+  transition: 0.5s ease;
+  height: 30px;
+  width: 100%;
+  width: 100%;
+  max-width: 150px;
+  position: absolute;
 }
