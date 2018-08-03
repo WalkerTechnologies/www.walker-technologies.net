@@ -66,10 +66,11 @@
 
   a {
     font-size: $scale8;
-    color: $walker-red-dark;
+    color: $walker-red;
+    text-decoration: none;
 
     &:hover {
-      color: $walker-red;
+      text-decoration: underline;
     }
   }
 }

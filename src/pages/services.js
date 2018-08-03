@@ -8,30 +8,16 @@ const Page = () => (
       <h2>Services Provided at Walker Technologies</h2>
     </div>
 
-    <section className="divided-section left">
       <CableInstallation />
-      <div className="divided-section-image" />
-    </section>
 
-    <section className="divided-section">
+
       <NetworkDesign />
-      <div className="divided-section-image" />
-    </section>
 
-    <section className="divided-section left">
       <NetworkTesting />
-      <div className="divided-section-image" />
-    </section>
 
-    <section className="divided-section">
       <SiteMaintenance />
-      <div className="divided-section-image" />
-    </section>
 
-    <section className="divided-section left">
       <WebDevelopment />
-      <div className="divided-section-image" />
-    </section>
   </React.Fragment>
 )
 

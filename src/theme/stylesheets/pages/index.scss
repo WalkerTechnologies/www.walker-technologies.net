@@ -98,3 +98,19 @@ section {
     text-decoration: underline;
   }
 }
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-wrapper:after {
+  background-color: red;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: url(../images/walker-technologies-w.svg) center no-repeat;
+  opacity: 0.75;
+}

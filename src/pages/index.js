@@ -18,7 +18,7 @@ const settings = {
 
 const Page = () => (
   <React.Fragment>
-    <div className="wrapper">
+    <div className="wrapper slider-wrapper">
       <Slider {...settings}>
         <div className="background background-1"></div>
         <div className="background background-2"></div>

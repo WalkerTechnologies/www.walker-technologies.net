@@ -41,7 +41,7 @@ const Layout = ({ children, data }) => (
           </div>
         </nav>
 
-        <div className="thatch"></div>
+        {/* <div className="thatch"></div> */}
       </header>
 
         <main>
