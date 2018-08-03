@@ -16,11 +16,12 @@
 }
 
 .divided-section-content {
-  background-color: white;
   box-sizing: border-box;
   border: 1px solid $walker-black;
-  color: $walker-black;
+  color: white;
+  color: black;
   padding: 18px;
+  background-color: rgba($walker-red, 0.9);
 
   h3 {
     padding-left: $scale10;
