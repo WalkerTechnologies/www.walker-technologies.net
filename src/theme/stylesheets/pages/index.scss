@@ -2,8 +2,99 @@
   background: white;
 }
 
-
 section {
   color: white;
   font-size: $scale8;
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+}
+
+.background-1 {
+  background-image: url(../images/backgrounds/data-center.jpg);
+}
+
+.background-2 {
+  background-image: url(../images/backgrounds/data-center-2.jpg);
+}
+
+.background-3 {
+  background-image: url(../images/backgrounds/data-center-3.jpg);
+}
+
+.background-4 {
+  background-image: url(../images/backgrounds/data-center-4.png);
+}
+
+.certifications-wrapper {
+  background-color: white;
+  border: 1px solid $walker-black;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+
+  p {
+    color: $walker-black;
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: $scale7;
+  }
+}
+
+.certifications {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  img {
+    max-width: 200px;
+    filter: grayscale(100%);
+  }
+}
+
+.section {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    max-width: 960px;
+    margin-bottom: 24px;
+  }
+}
+
+.connect {
+  background: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    max-width: 960px;
+    color: $walker-black;
+    font-size: $scale7;
+  }
+}
+
+.walker-button {
+  background-color: $walker-red;
+  color: white;
+  font-size: $scale7;
+  padding: 8px;
+  border: 1px solid $walker-black;
+  text-decoration: none;
+  font-family: 'BebasNeue';
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

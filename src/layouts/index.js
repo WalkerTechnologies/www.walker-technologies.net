@@ -81,7 +81,7 @@ const Layout = ({ children, data }) => (
         <div className="thatch"></div>
         <div className="copyright-wrapper">
           <p>&copy; 2013 &ndash; {(new Date()).getFullYear()} Walker&nbsp;Technologies,&nbsp;Inc.</p>
-          <a className="copyright-logo" href="">Walker Technologies Home</a>
+          <Link className="copyright-logo" to="/">Walker Technologies Home</Link>
           <p>All&nbsp;Rights&nbsp;Reserved.</p>
         </div>
       </footer>
