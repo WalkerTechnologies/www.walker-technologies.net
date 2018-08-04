@@ -7,9 +7,14 @@ $headerHeight: 100px;
   display: flex;
   flex-direction: column;
   height: $headerHeight;
-  justify-content: center;
+  justify-content: flex-start;
   padding-bottom: 5px;
   width: 100%;
+  transition: 0.5s ease;
+
+  &.active {
+    height: $headerHeight + 26px;
+  }
 }
 
 .walker-logo-globe {
@@ -49,10 +54,11 @@ $headerHeight: 100px;
   align-items: center;
   display: flex;
   flex-direction: row;
-  height: calc(#{$headerHeight} - 5px);
+  flex-shrink: 0;
+  height: $headerHeight - 5px;
   justify-content: space-between;
-  padding: 0 75px;
   max-width: 1080px;
+  padding: 0 75px;
   width: 100%;
 }
 
@@ -64,27 +70,23 @@ $headerHeight: 100px;
   align-self: flex-end;
 
   .main-link {
-    width: 100px;
     font-size: $scale8;
-    font-family: Lato, sans-serif;
+    font-family: 'DroidSans', sans-serif;
     text-decoration: none;
     color: white;
-    padding-right: $scale5;
+    margin-right: $scale5;
     text-transform: uppercase;
   }
 }
 
 .sublinks {
-  border-top: 1px solid white;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  margin-top: 2px;
-  max-width: 150px;
-  overflow: hidden;
-  position: absolute;
-  top: -200%;
+  max-width: 1080px;
+  opacity: 0;
+  transition: 0.5s ease;
   width: 100%;
 
   div {
@@ -94,31 +96,26 @@ $headerHeight: 100px;
     width: 100px + $scale5;
   }
 
-  a {
-    font-size: $scale11;
-    font-family: Lato, sans-serif;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    margin-top: $scale13;
+  &.active {
+    opacity: 1;
   }
 }
 
-.site-header:hover {
-  transition: 0.5s ease;
+.sublink {
+  padding: 0 8px;
+  font-size: $scale11;
+  font-family: Lato, sans-serif;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  margin-top: -$scale13;
+  border-right: 1px solid $walker-red;
 
-  .sublinks{
-    top: 0;
-    transition: 0.5s ease;
+  &:hover {
+    text-decoration: underline;
   }
 }
 
-.sublinks-wrapper {
-  overflow: hidden;
-  transition: 0.5s ease;
-  height: 30px;
-  width: 100%;
-  width: 100%;
-  max-width: 150px;
-  position: absolute;
+.sublink:last-child {
+  border-right: none;
 }

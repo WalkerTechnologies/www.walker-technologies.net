@@ -3,16 +3,18 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import { Parallax } from 'react-parallax'
-import { Provider, observer } from 'mobx-react'
+import { Provider, observer, inject } from 'mobx-react'
 import ContactUs from '../forms/ContactUs'
 import WalkerWordMark from '../theme/images/walker-technologies-text.svg'
 import Image from '../theme/images/backgrounds/data-center.jpg'
 import '../theme/stylesheets/index.scss'
+import RootStore from '../ui-models/RootStore'
 
 const form = ContactUs.create({})
+const store = RootStore.create({})
 
 const Layout = ({ children, data }) => (
-  <Provider form={form}>
+  <Provider store={store} form={form}>
     <React.Fragment>
       <Helmet>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,54 +28,7 @@ const Layout = ({ children, data }) => (
       <Parallax
         bgImage={Image}
       >
-      <header className="site-header">
-        <nav className="navigation">
-
-          <Link to="/" className="walker-link">
-            <span className="walker-logo-globe" />
-            <span className="walker-logo-wordmark" />
-          </Link>
-
-          <div className="">
-            <div className="navigation-links">
-              <div>
-                <Link to="/about/" className="main-link">About</Link>
-
-                <div className="sublinks-wrapper">
-                  <div className="sublinks">
-                    <Link to="/services/cable-installation">Cable Installation</Link>
-                    <Link to="/services/network-design">Network Design</Link>
-                  </div>
-                </div>
-
-              </div>
-
-              <div>
-                <Link to="/services/" className="main-link">Services</Link>
-
-                <div className="sublinks-wrapper">
-                  <div className="sublinks">
-                    <Link to="/services/network-testing">Network Testing</Link>
-                    <Link to="/services/site-maintenance">Site Maintenance</Link>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <Link to="/contact/" className="main-link">Contact</Link>
-
-                <div className="sublinks-wrapper">
-                  <div className="sublinks">
-                    <Link to="/services/badass-software">Badass Software</Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        {/* <div className="thatch"></div> */}
-      </header>
+        <Header />
 
         <main>
           {children()}
@@ -116,6 +71,32 @@ const Layout = ({ children, data }) => (
     </React.Fragment>
   </Provider>
 )
+
+const Header = inject('store')(observer(({store}) => (
+  <header
+    className={`site-header ${store.Header.shouldShowLinks ? 'active': ''}`}
+    onMouseEnter={store.Header.activateHover}
+    onMouseLeave={store.Header.deactivateHover}
+    >
+    <nav className="navigation">
+
+      <Link to="/" className="walker-link">
+        <span className="walker-logo-globe" />
+        <span className="walker-logo-wordmark" />
+      </Link>
+
+      <div className="navigation-links">
+        <Link to="/about/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('About')}>About</Link>
+        <Link to="/services/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('Services')}>Services</Link>
+        <Link to="/contact/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('Contact')}>Contact</Link>
+      </div>
+    </nav>
+
+    <div className={`sublinks ${store.Header.shouldShowLinks ? 'active': ''}`}>
+      {store.Header.linksToShow.map(({link, name}) => <Link to={link} className="sublink">{name}</Link>)}
+    </div>
+  </header>
+)))
 
 Layout.propTypes = {
   children: PropTypes.func,
