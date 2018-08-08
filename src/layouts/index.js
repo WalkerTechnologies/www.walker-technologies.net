@@ -9,6 +9,7 @@ import WalkerWordMark from '../theme/images/walker-technologies-text.svg'
 import Image from '../theme/images/backgrounds/data-center.jpg'
 import '../theme/stylesheets/index.scss'
 import RootStore from '../ui-models/RootStore'
+import WalkerGlobe from '../theme/images/walker-technologies-globe.svg'
 
 const form = ContactUs.create({})
 const store = RootStore.create({})
@@ -22,6 +23,10 @@ const Layout = ({ children, data }) => (
         <link rel="icon" type="image/png" href="/themes/old/images/favicon.png" />
         <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/themes/old/images/retina-favicon.png" />
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <title>{data.site.siteMetadata.title}</title>
+        <meta property="og:title" content={data.site.siteMetadata.title} />
+        <meta property="og:image" content={WalkerGlobe} />
       </Helmet>
 
 
