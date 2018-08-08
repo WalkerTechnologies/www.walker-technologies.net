@@ -1,8 +1,14 @@
 import React from 'react'
+import Video from '../../theme/videos/cat5-video.mp4'
 
 const Page = () => (
   <React.Fragment>
-    <div className="banner"></div>
+
+    <div className="banner">
+      <video autoPlay muted loop id="asdf">
+        <source src={Video} type="video/mp4" />
+      </video>
+    </div>
 
     <div className="page-head">
       <h2>Cable Installation</h2>

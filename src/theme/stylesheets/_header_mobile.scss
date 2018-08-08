@@ -9,6 +9,13 @@ $breakpoint: 900px;
   padding-bottom: 5px;
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .walker-logo-globe {
   display: none;
 }
@@ -23,10 +30,10 @@ $breakpoint: 900px;
 
 .walker-link {
   text-indent: -9000px;
-  padding-top: 56.25%;
   display: block;
   content: '';
   width: 100%;
+  min-height: 100px;
 }
 
 .thatch {
@@ -34,16 +41,6 @@ $breakpoint: 900px;
   height: 5px;
   background: url(../images/thatch.svg) center repeat-x;
   background-size: contain;
-}
-
-.navigation {
-  display: flex;
-  flex-direction: column;
-  height: calc(#{$headerHeight} - 5px);
-  padding: 0 75px;
-  justify-content: space-between;
-  align-items: center;
-
 }
 
 .navigation-links {
