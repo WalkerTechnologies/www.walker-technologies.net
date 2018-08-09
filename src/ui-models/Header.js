@@ -31,7 +31,7 @@ const Header = types
     },
 
     get linksToShow() {
-      self.links[self.sectionBeingHovered] || []
+      return self.links[self.sectionBeingHovered] || []
     },
     get links() {
       return {
