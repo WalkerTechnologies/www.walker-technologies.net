@@ -33,12 +33,6 @@ main {
   background: url(../images/backgrounds/data-center.jpg) repeat-y;
 }
 
-.sa-map-wrapper {
-  background: url(../images/san-antonio-white-red.png) center no-repeat;
-  background-size: cover;
-  width: 50%;
-}
-
 .newsletter-form {
   background-color: $walker-red;
   color: white;
@@ -49,6 +43,10 @@ main {
   justify-content: center;
   align-items: center;
   border: 1px solid $walker-black;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 
   p {
     margin-right: 12px;
@@ -75,6 +73,13 @@ main {
 
     &:hover {
       color: $walker-red;
+    }
+  }
+
+  input, button {
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      margin: 8px 0 0;
     }
   }
 }

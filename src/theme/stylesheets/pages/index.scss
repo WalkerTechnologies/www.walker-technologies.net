@@ -52,9 +52,16 @@ section {
   justify-content: space-around;
   align-items: center;
 
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
+
   img {
     max-width: 200px;
-    // filter: grayscale(100%);
+
+    @media screen and (max-width: 650px) {
+      margin: 24px 0;
+    }
   }
 }
 

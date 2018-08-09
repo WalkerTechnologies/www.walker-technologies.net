@@ -6,7 +6,7 @@ $footerHeight: 75px;
   display: flex;
   flex-direction: column;
   font-size: $scale9;
-  height: $footerHeight;
+  min-height: $footerHeight;
   padding-top: 5px;
   width: 100%;
 }
@@ -16,6 +16,12 @@ $footerHeight: 75px;
   display: flex;
   flex-grow: 1;
   justify-content: space-around;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 8px 0;
+  }
 
   p {
     width: 300px;
@@ -27,4 +33,10 @@ $footerHeight: 75px;
   background: url(../images/walker-technologies-w.svg) no-repeat center;
   background-size: contain;
   text-indent: -9001px;
+
+  @media screen and (max-width: 600px) {
+    height: 75px;
+    order: -1;
+    margin-bottom: 8px;
+  }
 }
