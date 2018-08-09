@@ -4,14 +4,9 @@
 @import "fonts";
 @import "layout";
 
-@media screen and (min-width: 901px) {
-  @import "header";
-}
-
-@media screen and (max-width: 900px) {
-  @import "header_mobile";
-}
-
+@import "header";
+@import "header_mobile";
+@import "slide_menu";
 
 @import "footer";
 @import "contact";
@@ -25,5 +20,4 @@
 
 video {
   width: 100%;
-
 }

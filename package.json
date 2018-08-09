@@ -14,10 +14,12 @@
     "mobx-react": "^5.2.3",
     "mobx-state-tree": "^2.2.0",
     "react": "^16.4.1",
+    "react-burger-menu": "^2.5.2",
     "react-css-transition": "^0.7.4",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-parallax": "^1.8.0",
+    "react-responsive": "^5.0.0",
     "react-slick": "^0.23.1",
     "react-spring": "^5.3.17",
     "slick-carousel": "^1.8.1"

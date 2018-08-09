@@ -10,6 +10,8 @@ import Image from '../theme/images/backgrounds/data-center.jpg'
 import '../theme/stylesheets/index.scss'
 import RootStore from '../ui-models/RootStore'
 import WalkerGlobe from '../theme/images/walker-technologies-globe.svg'
+import Header from './components/Header'
+import SlideInMenu from './components/SlideInMenu'
 
 const form = ContactUs.create({})
 const store = RootStore.create({})
@@ -17,6 +19,8 @@ const store = RootStore.create({})
 const Layout = ({ children, data }) => (
   <Provider store={store} form={form}>
     <React.Fragment>
+      <SlideInMenu />
+
       <Helmet>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -76,32 +80,6 @@ const Layout = ({ children, data }) => (
     </React.Fragment>
   </Provider>
 )
-
-const Header = inject('store')(observer(({store}) => (
-  <header
-    className={`site-header ${store.Header.shouldShowLinks ? 'active': ''}`}
-    onMouseEnter={store.Header.activateHover}
-    onMouseLeave={store.Header.deactivateHover}
-    >
-    <nav className="navigation">
-
-      <Link to="/" className="walker-link">
-        <span className="walker-logo-globe" />
-        <span className="walker-logo-wordmark" />
-      </Link>
-
-      <div className="navigation-links">
-        <Link to="/about/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('About')}>About</Link>
-        <Link to="/services/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('Services')}>Services</Link>
-        <Link to="/contact/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('Contact')}>Contact</Link>
-      </div>
-    </nav>
-
-    <div className={`sublinks ${store.Header.shouldShowLinks ? 'active': ''}`}>
-      {store.Header.linksToShow.map(({link, name}) => <Link to={link} className="sublink">{name}</Link>)}
-    </div>
-  </header>
-)))
 
 Layout.propTypes = {
   children: PropTypes.func,

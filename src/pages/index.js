@@ -28,7 +28,8 @@ const Page = () => (
     </div>
 
     <section className="connect">
-      <p>Walker Technologies connects the world together <Link to="/about" className="walker-button">Learn More</Link></p>
+      <p>Walker Technologies connects the world together</p>
+      <Link to="/about" className="walker-button">Learn More</Link>
     </section>
 
     <section className="section">

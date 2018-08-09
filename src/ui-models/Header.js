@@ -31,6 +31,9 @@ const Header = types
     },
 
     get linksToShow() {
+      self.links[self.sectionBeingHovered] || []
+    },
+    get links() {
       return {
         'About' : [
           { link: '/about/careers', name: 'Careers' },
@@ -43,7 +46,7 @@ const Header = types
           { link: '/services/site-maintenance', name: 'Site Maintenance' },
           { link: '/services/badass-software', name: 'Badass Software' },
         ]
-      }[self.sectionBeingHovered] || []
+      }
     }
   }))
 
