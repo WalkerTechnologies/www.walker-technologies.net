@@ -36,7 +36,7 @@ section {
   border: 1px solid $walker-black;
   display: flex;
   flex-direction: column;
-  padding: 32px;
+  padding: 32px 16px;
 
   p {
     color: $walker-black;
@@ -67,7 +67,7 @@ section {
 
 .section {
   background: rgba(0, 0, 0, 0.5);
-  padding: 24px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,10 +80,11 @@ section {
 
 .connect {
   background: white;
-  padding: 24px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   p {
     max-width: 960px;
