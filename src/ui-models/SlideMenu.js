@@ -5,6 +5,9 @@ const SlideMenu = types
     isOpen: false,
   })
   .actions(self => ({
+    close() {
+      self.isOpen = false
+    },
     toggle() {
       self.isOpen = !self.isOpen
     },
