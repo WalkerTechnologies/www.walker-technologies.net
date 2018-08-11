@@ -6,12 +6,6 @@ const Header = types
     sectionBeingHovered: '',
   })
   .actions(self => ({
-    afterCreate() {
-      onSnapshot(self, snapshot => {
-        console.log(snapshot)
-      })
-    },
-
     activateHover() {
       self.isHovering = true
     },
@@ -31,6 +25,7 @@ const Header = types
     },
 
     get linksToShow() {
+      console.log(self.links[self.sectionBeingHovered] || [])
       return self.links[self.sectionBeingHovered] || []
     },
     get links() {
