@@ -12,7 +12,7 @@ const SlideInMenu = ({store}) => (
   <MediaQuery maxWidth={900} >
     <Menu right isOpen={store.SlideMenu.isOpen} onStateChange={state => store.SlideMenu.hasOpened(state)}>
       <div className="menu">
-        <div className="wordmark-wrapper-mobile">
+        <div className="wordmark-wrapper-mobile side-menu">
           <ClosableLink to="/" className="walker-logo-wordmark-mobile"></ClosableLink>
         </div>
 
