@@ -39,7 +39,7 @@ const Header = types
           { link: '/services/network-design', name: 'Network Design' },
           { link: '/services/network-testing', name: 'Network Testing' },
           { link: '/services/site-maintenance', name: 'Site Maintenance' },
-          { link: '/services/badass-software', name: 'Badass Software' },
+          { link: '/services/badass-software', name: 'Software Development' },
         ]
       }
     }
