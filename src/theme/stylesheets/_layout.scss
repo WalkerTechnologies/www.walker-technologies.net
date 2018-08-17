@@ -85,15 +85,39 @@ main {
 }
 
 .banner {
-  height: 175px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  max-height: 175px;
+  min-height: 175px;
+  height: auto;
+  position: relative;
+  background-color: $walker-black;
+}
 
-  video {
-    position: absolute;
-    width: 100%;
-    top: -100%;
+.banner-video {
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  pointer-events: none;
+
+  &:-webkit-media-controls-start-playback-button {
+    display: none;
   }
+}
+
+.banner-title {
+  align-self: center;
+  justify-self: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  color: white;
 }
 
 .page-head {

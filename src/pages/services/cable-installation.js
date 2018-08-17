@@ -1,17 +1,17 @@
 import React from 'react'
-import Video from '../../theme/videos/cat5-video.mp4'
+import Video from '../../theme/videos/cat-5-banner.mp4'
+import Image from '../../theme/videos/cat-5-banner.png'
 
 const Page = () => (
   <React.Fragment>
 
     <div className="banner">
-      <video autoPlay muted loop id="asdf">
+      <video autoPlay playsInline muted loop className="banner-video">
         <source src={Video} type="video/mp4" />
+        <source src={Image} type="image/jpg"/>
       </video>
-    </div>
 
-    <div className="page-head">
-      <h2>Cable Installation</h2>
+      <h2 className="banner-title">Cable Installation</h2>
     </div>
 
     <div className="services-content">
