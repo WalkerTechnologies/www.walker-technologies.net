@@ -18,7 +18,8 @@ const SiteHeader = inject('store')(observer(({store}) => (
 
       <div className="navigation-links">
         <Link to="/about/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('About')}>About</Link>
-        <Link to="/services/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('Services')}>Services</Link>
+        <Link to="/solutions/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('Solutions')}>Solutions</Link>
+        <Link to="/design/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('Design')}>Design</Link>
         <Link to="/contact/" className="main-link" onMouseEnter={() => store.Header.hoveringOverSection('Contact')}>Contact</Link>
       </div>
     </nav>

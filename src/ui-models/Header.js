@@ -30,15 +30,18 @@ const Header = types
     get links() {
       return {
         'About' : [
+          { link: '/about/who-we-are', name: 'Who We Are' },
           { link: '/about/careers', name: 'Careers' },
           { link: '/about/experience', name: 'Experience' },
         ],
-        'Services' : [
-          { link: '/services/cable-installation', name: 'Cable Installation' },
-          { link: '/services/network-design', name: 'Network Design' },
-          { link: '/services/network-testing', name: 'Network Testing' },
-          { link: '/services/site-maintenance', name: 'Site Maintenance' },
-          { link: '/services/badass-software', name: 'Software Development' },
+        'Solutions' : [
+          { link: '/solutions/structured-cabling', name: 'Structured Cabling' },
+          { link: '/solutions/av', name: 'Audio / Visual' },
+        ],
+        'Design' : [
+          { link: '/design/network-infrastructure', name: 'Network Infrastructure' },
+          { link: '/design/wireless-infrastructure', name: 'Wireless Infrastructure' },
+          { link: '/design/software-architecture', name: 'Software Architecture' },
         ]
       }
     }

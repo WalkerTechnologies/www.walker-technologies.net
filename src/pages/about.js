@@ -2,10 +2,23 @@ import React from 'react'
 
 const Page = () => (
   <React.Fragment>
-    <div className="banner"></div>
-    <div className="page-head">
-      <h2>About Walker Technologies</h2>
+    <div className="banner">
+      <video autoPlay playsInline muted loop className="banner-video">
+      </video>
+
+      <h2 className="banner-title">About Walker Technologies</h2>
     </div>
+
+   <div className="services-content">
+      <section className="divided-section-content">
+        <p>With experience based on many years in the industry, Walker Technologies, Inc. was designed to meet the growing demand in the low voltage industry. The company has been built with a solid focus on quality work and the ability to deliver solutions to meet our customer’s needs.</p>
+
+        <p>Integrity and dependability have been the cornerstones of our growth and we are committed to keeping our organization at the forefront of the technology and networking industries.</p>
+
+        <p>We have established and developed the success of our company based on hard work and tireless hours. Our design team and skilled specialists are also an important factor to our success. We have the capacity to meet any deadline that might require our team to work hours appropriately tailored to each customer and project.</p>
+      </section>
+    </div>
+
 
   </React.Fragment>
 )
