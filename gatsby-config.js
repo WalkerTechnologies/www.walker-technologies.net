@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Walker Technologies, Inc.',
+    domain: 'https://new.walker-technologies.net'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

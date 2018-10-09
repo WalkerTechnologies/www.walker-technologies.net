@@ -29,8 +29,8 @@ const Layout = ({ children, data }) => (
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <title>{data.site.siteMetadata.title}</title>
-        <meta property="og:title" content={data.site.siteMetadata.title} />
-        <meta property="og:image" content={WalkerGlobe} />
+        <meta property="og:title" content={"Connect the World Together"} />
+        <meta property="og:image" content={`${WalkerGlobe}`} />
       </Helmet>
 
 
