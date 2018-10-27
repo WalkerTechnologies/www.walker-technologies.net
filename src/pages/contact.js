@@ -1,5 +1,5 @@
 import React from 'react'
-import Video from '../../theme/videos/cat-5-banner.mp4'
+import Video from '../theme/videos/cat-5-banner.mp4'
 
 const Page = () => (
   <React.Fragment>
@@ -9,17 +9,15 @@ const Page = () => (
         <source src={Image} type="image/jpg"/>
       </video>
 
-      <h2 className="banner-title">Careers</h2>
+      <h2 className="banner-title">Contact</h2>
     </div>
 
-   <div className="services-content">
+    <div className="services-content">
       <section className="divided-section-content">
-        <h3>Career Form here</h3>
       </section>
     </div>
-
-
   </React.Fragment>
 )
+
 
 export default Page

@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: $scale4;
+  margin-bottom: $scale2;
 }
 
 .divided-section-content {
@@ -30,6 +30,7 @@
   color: $walker-black;
   max-width: 960px;
   line-height: 1.25;
+  margin: 32px 0;
 
   h2 {
     padding: 18px;
@@ -46,7 +47,7 @@
 
   p {
     padding-left: $scale10;
-    margin-bottom: $scale9;
+    margin-bottom: $scale7;
   }
 
   p:last-of-type {

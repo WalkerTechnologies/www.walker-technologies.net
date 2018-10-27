@@ -50,7 +50,7 @@ const Layout = ({ children, data }) => (
             <img src={WalkerWordMark} alt="Walker Technologies Wordmark"/>
             <p className="walker-address-location">Headquartered in San Antonio, Texas</p>
             <a href="tel:210-845-7630">(210) 845-7630</a>
-            <a href="mailto:adam@walker-technologies.net">adam@walker-technologies.net</a>
+            <a href="mailto:afreeman@walker-technologies.net">afreeman@walker-technologies.net</a>
           </address>
 
           {/* <div className="walker-contact-form">
