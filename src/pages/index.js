@@ -6,6 +6,7 @@ import CommscopeLogo from '../theme/images/certifications/commscope.png'
 import LevitonLogo from '../theme/images/certifications/leviton.svg'
 import PanduitLogo from '../theme/images/certifications/panduit.png'
 import SBALogo from '../theme/images/certifications/sba.svg'
+import { SetBannerTitle } from '../layouts/components/BannerTitle'
 
 const settings = {
   autoplay: true,
@@ -26,6 +27,8 @@ const Page = () => (
         <div className="background background-4"></div>
       </Slider>
     </div>
+
+    <SetBannerTitle value={"Walker Technologies"} />
 
     <section className="connect">
       <p>Walker Technologies connects the world together</p>

@@ -12,12 +12,16 @@ import RootStore from '../ui-models/RootStore'
 import WalkerGlobe from '../theme/images/walker-technologies-globe.svg'
 import Header from './components/Header'
 import SlideInMenu from './components/SlideInMenu'
+import Video from '../theme/videos/cat-5-banner.mp4'
+import BannerTitle, { BannerTitleProvider } from './components/BannerTitle'
+
 
 const form = ContactUs.create({})
 const store = RootStore.create({})
 
 const Layout = ({ children, data }) => (
   <Provider store={store} form={form}>
+    <BannerTitleProvider>
     <React.Fragment>
       <SlideInMenu />
 
@@ -40,6 +44,15 @@ const Layout = ({ children, data }) => (
         <Header />
 
         <main>
+          <div className="banner">
+            <video autoPlay playsInline muted loop className="banner-video">
+              <source src={Video} type="video/mp4" />
+              <source src={Image} type="image/jpg"/>
+            </video>
+
+            <h2 className="banner-title"><BannerTitle /></h2>
+          </div>
+
           {children()}
         </main>
 
@@ -78,6 +91,7 @@ const Layout = ({ children, data }) => (
       </Parallax>
 
     </React.Fragment>
+    </BannerTitleProvider>
   </Provider>
 )
 
