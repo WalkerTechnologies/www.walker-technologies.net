@@ -25,7 +25,7 @@ const SiteHeader = inject('store')(observer(({store}) => (
     </nav>
 
     <div className={`sublinks ${store.Header.shouldShowLinks ? 'active': ''}`}>
-      {store.Header.linksToShow.map(({link, name}) => <Link to={link} className="sublink">{name}</Link>)}
+      {store.Header.linksToShow.map(({link, name}) => <Link to={link} key={link} className="sublink">{name}</Link>)}
     </div>
   </header>
 )))

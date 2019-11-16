@@ -18,11 +18,11 @@ const SlideInMenu = ({store}) => (
 
         <div className="slide-menu-links">
           <ClosableLink to="/about" className="main-link">About</ClosableLink>
-            { store.Header.links.About.map(({link, name}) => <ClosableLink to={link} className="sub-link">{name}</ClosableLink>)}
+            { store.Header.links.About.map(({link, name}) => <ClosableLink to={link} key={link} className="sub-link">{name}</ClosableLink>)}
           <ClosableLink to="/solutions" className="main-link">Solutions</ClosableLink>
-            { store.Header.links.Solutions.map(({link, name}) => <ClosableLink to={link} className="sub-link">{name}</ClosableLink>)}
+            { store.Header.links.Solutions.map(({link, name}) => <ClosableLink to={link} key={link} className="sub-link">{name}</ClosableLink>)}
           <ClosableLink to="/design" className="main-link">Design</ClosableLink>
-            { store.Header.links.Design.map(({link, name}) => <ClosableLink to={link} className="sub-link">{name}</ClosableLink>)}
+            { store.Header.links.Design.map(({link, name}) => <ClosableLink to={link} key={link} className="sub-link">{name}</ClosableLink>)}
           <ClosableLink to="/contact" className="main-link">Contact</ClosableLink>
         </div>
       </div>
