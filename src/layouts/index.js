@@ -1,9 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import PropTypes from 'prop-types'
-import { Parallax, Background } from 'react-parallax'
-import { Provider, observer, inject } from 'mobx-react'
+import { Parallax } from 'react-parallax'
+import { Provider, observer } from 'mobx-react'
 import ContactUs from '../forms/ContactUs'
 import WalkerWordMark from '../theme/images/walker-technologies-text.svg'
 import Image from '../theme/images/backgrounds/data-center.jpg'
@@ -19,7 +18,7 @@ import BannerTitle, { BannerTitleProvider } from './components/BannerTitle'
 const form = ContactUs.create({})
 const store = RootStore.create({})
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <Provider store={store} form={form}>
     <BannerTitleProvider>
     <React.Fragment>
@@ -32,7 +31,7 @@ const Layout = ({ children, data }) => (
         <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/themes/old/images/retina-favicon.png" />
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-        <title>{data.site.siteMetadata.title}</title>
+        <title>Walker Technologies, Inc.</title>
         <meta property="og:title" content={"Connect the World Together"} />
         <meta property="og:image" content={`${WalkerGlobe}`} />
       </Helmet>
@@ -53,7 +52,7 @@ const Layout = ({ children, data }) => (
             <h2 className="banner-title"><BannerTitle /></h2>
           </div>
 
-          {children()}
+          {children}
         </main>
 
         <div className="contact-wrapper">
@@ -95,18 +94,5 @@ const Layout = ({ children, data }) => (
   </Provider>
 )
 
-Layout.propTypes = {
-  children: PropTypes.func,
-}
-
 export default observer(Layout)
 
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

@@ -1,5 +1,4 @@
 import React from 'react'
-import Video from '../../theme/videos/cat-5-banner.mp4'
 import {SetBannerTitle} from '../../layouts/components/BannerTitle'
 
 const Page = () => (
