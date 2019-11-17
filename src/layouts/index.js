@@ -52,7 +52,7 @@ const Layout = ({ children }) => (
             <h2 className="banner-title"><BannerTitle /></h2>
           </div>
 
-          {children}
+          {children()}
         </main>
 
         <div className="contact-wrapper">
